@@ -7,14 +7,15 @@ An Lang implementation for [nultihash](https://github.com/multiformats/multihash
 
 ## Usage
 
-```
-multiaddr:new("/ip6/2601:9:4f81:9700:803e:ca65:66e8:c21")
-```
-
-The encoder is idempotent:
+An example using the blake2b hash:
 
 ```
-Str = "/ip6/2601:9:4f81:9700:803e:ca65:66e8:c21",
-Str = multiaddr:to_string(multiaddr:new("/ip6/2601:9:4f81:9700:803e:ca65:66e8:c21")).
+Hash = multihash:hash(<<"hello world">>, {blake2b, 64}).
+```
+
+Decoding a multihash get the digest and hash used:
+
+```
+{ok, Digest, {blake2b, 64}, _} = multihash:decode(Hash).
 ```
 

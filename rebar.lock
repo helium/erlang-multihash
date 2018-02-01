@@ -1,16 +1,8 @@
-[{<<"base32">>,
-  {git,"https://github.com/aetrion/base32_erlang",
-       {ref,"40431a7480176b24863e18b92d9872e54c714df5"}},
-  0},
- {<<"base58">>,
-  {git,"https://github.com/mbrix/erl-base58",
-       {ref,"dd22cf9fa475befb8258f4cf67d77484c0d7fd37"}},
-  0},
- {<<"keccakf1600">>,
-  {git,"git://github.com/potatosalad/erlang-keccakf1600.git",
-       {ref,"211a8a291b7bcdba8d0d9214b6551bade960311d"}},
-  0},
- {<<"small_ints">>,
-  {git,"https://github.com/whatyouhide/small_ints",
-       {ref,"c80501a65ed98ed7b9f03cd03c93641c2c5d6ef9"}},
-  0}].
+{"1.1.0",
+[{<<"keccakf1600">>,{pkg,<<"keccakf1600">>,<<"2.0.0">>},0},
+ {<<"small_ints">>,{pkg,<<"small_ints">>,<<"0.1.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"keccakf1600">>, <<"69D02D844A101BF3C75484C9E334FD04B0F57280727E881CAC3BD8240432F43A">>},
+ {<<"small_ints">>, <<"82A824C8794A2DDC73CB5CD00EAD11331DB296521AD16A619C13D668572B868A">>}]}
+].

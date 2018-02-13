@@ -14,7 +14,7 @@
 
 {application, multihash,
  [{description, "An Erlangng implementation of multihash"},
-  {vsn, "0.1.0"},
+  {vsn, "git"},
   {registered, []},
   {applications, [kernel, stdlib]},
   {env,[]},
@@ -22,6 +22,6 @@
   %% hex.pm packaging:
   {licenses, ["Apache 2.0"]},
   {maintainers, ["Helium"]},
-  {links, [{"Github", "https://github.com/helium/erlang-multihash"}]}
+  {links, [{"Github", "https://github.com/helium/erlang-multihash"}]},
+  {files, ["src", "vendor"]}
  ]}.
-

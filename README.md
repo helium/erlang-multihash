@@ -3,7 +3,7 @@
 
 # erlang-multihash
 
-An Erlang implementation for [nultihash](https://github.com/multiformats/multihash). 
+An Erlang implementation for [multihash](https://github.com/multiformats/multihash). 
 
 ## Usage
 

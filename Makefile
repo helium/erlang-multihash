@@ -23,7 +23,7 @@ cover: test
 	$(REBAR) cover
 
 test:
-	$(REBAR) eunit
+	$(REBAR) as test do ct --verbose
 
 shell:
 	$(REBAR) shell

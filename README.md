@@ -3,19 +3,19 @@
 
 # erlang-multihash
 
-An Erlang implementation for [multihash](https://github.com/multiformats/multihash). 
+An Erlang wrapper for [rust_multihash](https://github.com/multiformats/rust-multihash). 
 
 ## Usage
 
 An example using the blake2b hash:
 
 ```
-Hash = multihash:hash(<<"hello world">>, {blake2b, 64}).
+{ok, Digest} = multihash:digest(<<"hello world">>, blake2b256).
 ```
 
-Decoding a multihash get the digest and hash used:
+Get the hash used for a given multihash digest:
 
 ```
-{ok, Digest, {blake2b, 64}, _} = multihash:decode(Hash).
+{ok, blake2b256} = multihash:hash(Digest).
 ```
 

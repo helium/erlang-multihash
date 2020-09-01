@@ -1,0 +1,15 @@
+[package]
+name = "multihash"
+version = "0.0.1"
+authors = [ "Marc Nijdam <marc@helium.com>" ]
+license = "Apache-2.0"
+edition = "2018"
+
+[lib]
+name = "multihash"
+crate-type = ["dylib"]
+
+
+[dependencies]
+rustler = "0.22.0-rc.0"
+multihash = "0.11"

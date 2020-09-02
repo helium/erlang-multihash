@@ -25,8 +25,8 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         args: --manifest-path=crates/multihash/Cargo.toml -- -Dclippy::all
-        
-    - name: Build 
+
+    - name: Build
       run: make
 
     - name: Typecheck Erlang
@@ -35,10 +35,10 @@ jobs:
     - name: Test Erlang
       run: make test
 
-    - name: Generate coverage report 
+    - name: Generate coverage report
       run: make cover
 
-    - name: Upload coverage report 
+    - name: Upload coverage report
       uses: codecov/codecov-action@v1
       with:
         file: ./_build/test/covertool/multihash.covertool.xml

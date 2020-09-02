@@ -1,0 +1,36 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        components: clippy, rustfmt
+
+    - name: Build
+      run: make
+
+    - name: Test Erlang
+      run: make test
+
+    - name: Typecheck Erlang
+      run: make typecheck
+
+    - name: Check Rust formatting
+      run: cargo fmt --manifest-path=crates/multihash/Cargo.toml -- --check
+
+    - name: Lint Rust
+      uses: actions-rs/clippy-check@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        args: --manifest-path=crates/multihash/Cargo.toml -- -Dclippy::all

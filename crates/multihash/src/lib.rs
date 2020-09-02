@@ -1,7 +1,6 @@
 use multihash::{Code, MultihashRef};
-use std::{convert::TryFrom, io::Write};
-
 use rustler::{Binary, Encoder, Env, NifResult, OwnedBinary, Term};
+use std::{convert::TryFrom, io::Write};
 
 rustler::atoms! {
     ok,

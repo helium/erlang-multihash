@@ -19,7 +19,7 @@ clean:
 	$(REBAR) clean
 	$(REBAR) as prod clean
 
-cover: test
+cover:
 	$(REBAR) cover --verbose
 
 test:

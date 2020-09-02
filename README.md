@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/helium/erlang-multihash.svg?branch=master)](https://travis-ci.org/helium/erlang-multihash)
-[![Coverage Status](https://coveralls.io/repos/github/helium/erlang-multihash/badge.svg?branch=master)](https://coveralls.io/github/helium/erlang-multihash?branch=master)
+![build](https://github.com/helium/erlang-multihash/workflows/Continuous%20Integration/badge.svg)
+[![codecov](https://codecov.io/gh/helium/erlang-multihash/branch/master/graph/badge.svg)](https://codecov.io/gh/helium/erlang-multihash)
 
 # erlang-multihash
 

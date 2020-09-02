@@ -20,7 +20,7 @@ clean:
 	$(REBAR) as prod clean
 
 cover:
-	$(REBAR) cover --verbose
+	$(REBAR) do cover,covertool generate
 
 test:
 	$(REBAR) as test do eunit

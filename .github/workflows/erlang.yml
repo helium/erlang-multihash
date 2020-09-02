@@ -41,5 +41,5 @@ jobs:
     - name: Upload coverage report 
       uses: codecov/codecov-action@v1
       with:
-        file: ./_build/test/cover/eunit.coverdata
+        file: ./_build/test/covertool/multihash.covertool.xml
         flags: unittests

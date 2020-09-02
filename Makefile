@@ -7,7 +7,7 @@ PKG_NAME_VER=${SHORTSHA}
 OS_NAME=$(shell uname -s)
 
 ifeq (${OS_NAME},FreeBSD)
-make="gmake"
+MAKE="gmake"
 else
 MAKE="make"
 endif
@@ -19,11 +19,11 @@ clean:
 	$(REBAR) clean
 	$(REBAR) as prod clean
 
-cover: test
-	$(REBAR) cover
+cover:
+	$(REBAR) cover --verbose
 
 test:
-	$(REBAR) as test do ct --verbose
+	$(REBAR) as test do eunit
 
 shell:
 	$(REBAR) shell

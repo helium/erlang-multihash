@@ -1,0 +1,16 @@
+-define(identity, 16#00).
+-define(sha1, 16#11).
+-define(sha2_256, 16#12).
+-define(sha2_512, 16#13).
+-define(sha3_224, 16#17).
+-define(sha3_256, 16#16).
+-define(sha3_384, 16#15).
+-define(sha3_512, 16#14).
+-define(keccak224, 16#1a).
+-define(keccak256, 16#1b).
+-define(keccak384, 16#1c).
+-define(keccak512, 16#1d).
+-define(blake2b256, 16#b220).
+-define(blake2b512, 16#b240).
+-define(blake2s128, 16#b250).
+-define(blake2s256, 16#b260).

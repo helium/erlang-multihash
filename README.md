@@ -1,21 +1,21 @@
-[![Build Status](https://travis-ci.org/helium/erlang-multihash.svg?branch=master)](https://travis-ci.org/helium/erlang-multihash)
-[![Coverage Status](https://coveralls.io/repos/github/helium/erlang-multihash/badge.svg?branch=master)](https://coveralls.io/github/helium/erlang-multihash?branch=master)
+![build](https://github.com/helium/erlang-multihash/workflows/Continuous%20Integration/badge.svg)
+[![codecov](https://codecov.io/gh/helium/erlang-multihash/branch/master/graph/badge.svg)](https://codecov.io/gh/helium/erlang-multihash)
 
 # erlang-multihash
 
-An Erlang implementation for [multihash](https://github.com/multiformats/multihash). 
+An Erlang wrapper for [rust_multihash](https://github.com/multiformats/rust-multihash). 
 
 ## Usage
 
 An example using the blake2b hash:
 
 ```
-Hash = multihash:hash(<<"hello world">>, {blake2b, 64}).
+{ok, Digest} = multihash:digest(<<"hello world">>, blake2b256).
 ```
 
-Decoding a multihash get the digest and hash used:
+Get the hash used for a given multihash digest:
 
 ```
-{ok, Digest, {blake2b, 64}, _} = multihash:decode(Hash).
+{ok, blake2b256} = multihash:hash(Digest).
 ```
 

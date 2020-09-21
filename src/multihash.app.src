@@ -12,15 +12,14 @@
 %% See the License for the specific language governing permissions and
 %% limitations under the License.
 
-{application, multihash,
- [{description, "An Erlangng implementation of multihash"},
-  {vsn, "git"},
-  {registered, []},
-  {applications, [kernel, stdlib]},
-  {env,[]},
+{application, multihash, [
+    {description, "An Erlangng implementation of multihash"},
+    {vsn, "git"},
+    {registered, []},
+    {applications, [kernel, stdlib]},
+    {env, []},
 
-  %% hex.pm packaging:
-  {licenses, ["Apache 2.0"]},
-  {maintainers, ["Helium"]},
-  {links, [{"Github", "https://github.com/helium/erlang-multihash"}]}
- ]}.
+    %% hex.pm packaging:
+    {licenses, ["Apache 2.0"]},
+    {links, [{"Github", "https://github.com/helium/erlang-multihash"}]}
+]}.

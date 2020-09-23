@@ -19,6 +19,17 @@
     {applications, [kernel, stdlib]},
     {env, []},
 
+    {files, [
+        "LICENSE",
+        "README.md",
+        "rebar.*",
+        "include",
+        "src",
+        "priv",
+        "crates/multihash/Cargo.*",
+        "crates/multihash/.cargo",
+        "crates/multihash/src"
+    ]},
     %% hex.pm packaging:
     {licenses, ["Apache 2.0"]},
     {links, [{"Github", "https://github.com/helium/erlang-multihash"}]}

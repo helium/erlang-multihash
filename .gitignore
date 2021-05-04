@@ -19,3 +19,7 @@ log/
 GPATH
 GRTAGS
 GTAGS
+so-path
+.DS_Store
+.idea
+*.log

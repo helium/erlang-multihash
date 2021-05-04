@@ -18,13 +18,13 @@ jobs:
         components: clippy, rustfmt
 
     - name: Check Rust formatting
-      run: cargo fmt --manifest-path=crates/multihash/Cargo.toml -- --check
+      run: cargo fmt -- --check
 
     - name: Lint Rust
       uses: actions-rs/clippy-check@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        args: --manifest-path=crates/multihash/Cargo.toml -- -Dclippy::all
+        args: -- -Dclippy::all
 
     - name: Build
       run: make

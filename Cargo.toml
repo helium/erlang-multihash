@@ -4,11 +4,12 @@ version = "0.0.1"
 authors = [ "Marc Nijdam <marc@helium.com>" ]
 license = "Apache-2.0"
 edition = "2018"
+build = "native/build.rs"
 
 [lib]
 name = "multihash"
 crate-type = ["dylib"]
-
+path = "native/lib.rs"
 
 [dependencies]
 rustler = "0.22.0-rc.0"

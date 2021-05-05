@@ -26,9 +26,9 @@
         "include",
         "src",
         "priv",
-        "crates/multihash/Cargo.*",
-        "crates/multihash/.cargo",
-        "crates/multihash/src"
+ 	"Cargo.*",
+	".cargo",
+	"native"
     ]},
     %% hex.pm packaging:
     {licenses, ["Apache 2.0"]},
